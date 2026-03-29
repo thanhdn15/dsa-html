@@ -6328,7 +6328,7 @@ function initTrieViz(area){
 let currentLang = 'js';
 const practiceDrafts = {};
 const EXECUTOR_API_STORAGE_KEY = 'dsa-executor-api-base';
-const EXECUTOR_API_INTEGRATED_BASE = 'http://localhost:8787';
+const EXECUTOR_API_INTEGRATED_BASE = 'https://excution-api.onrender.com';
 
 function getPracticeDraftKey(lessonId, lang) {
   return `${lessonId || 'lesson'}:${lang || 'js'}`;
@@ -6581,7 +6581,7 @@ async function runNativeCode() {
     const msg = escapeHtml(err.message || 'Không thể chạy code.');
     const commonHelp = [
       '1) Chạy backend: cd execution-api && node server.js',
-      '2) Kiểm tra API: http://localhost:8787/health',
+      '2) Kiểm tra API: https://excution-api.onrender.com/health',
       '3) Mở trang bằng localhost thay vì file://',
       '4) Nếu deploy online, đảm bảo endpoint /execute hoạt động và cho phép CORS'
     ];
